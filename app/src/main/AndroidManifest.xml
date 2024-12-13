@@ -16,6 +16,9 @@
             android:name=".Registro3"
             android:exported="false" />
         <activity
+            android:name=".registro1"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
