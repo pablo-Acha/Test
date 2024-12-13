@@ -14,7 +14,6 @@
     <string name="confirm_password_hint">********</string>
     <string name="next_button">Siguiente</string>
     <string name="register_button">Regístrate</string>
-    <string name="app_name">PruebaPantallas</string>
     <string name="paw_left">Pata izquierda</string>
     <string name="paw_right">Pata derecha</string>
 
@@ -31,4 +30,13 @@
     <string name="home_button">Casita</string>
     <string name="texto_inicio">Conecta, cuida y encuentra: todo para tus mejores amigos de cuatro patas.</string>
     <string name="bienvenido">¡Guau, bienvenido de nuevo!</string>
+
+    <string name="app_name">spamear</string>
+    <string name="tituloRegistro6">Queremos saber más de tu perrijo para usar PawPal</string>
+    <string name="R6pregunta1"> ¿Cuál es su nombre?</string>
+    <string name="R6pregunta2"> ¿Cuántos años tiene?</string>
+    <string name="R6editText1"> Ej: Cachuchin</string>
+    <string name="R6editText2"> Ej: 3 años</string>
+    <string name="tituloRegistro5"> ¿Dónde estás ubicado? </string>
+
 </resources>
