@@ -1,3 +1,34 @@
 <resources>
-    <string name="app_name">spamear</string>
+
+    <string name="main_title">Queremos saber más acerca de ti 😊</string>
+    <string name="register_title">¡Regístrate con lo que prefieras 😊!</string>
+    <string name="nombre">NOMBRE</string>
+    <string name="edad">EDAD</string>
+    <string name="email_label">CORREO ELECTRÓNICO / TELÉFONO</string>
+    <string name="password_label">CREA TU CONTRASEÑA</string>
+    <string name="confirm_password_label">VERIFICA TU CONTRASEÑA</string>
+    <string name="ejemplo_nombre">Ej: Lucia </string>
+    <string name="ejemplo_edad">Ej: 18 años</string>
+    <string name="ejemplo_email">Ej: jdeon23@gmail.com</string>
+    <string name="password_hint">********</string>
+    <string name="confirm_password_hint">********</string>
+    <string name="next_button">Siguiente</string>
+    <string name="register_button">Regístrate</string>
+    <string name="app_name">PruebaPantallas</string>
+    <string name="paw_left">Pata izquierda</string>
+    <string name="paw_right">Pata derecha</string>
+
+    <string name="grande">Grande</string>
+    <string name="genero">¿Es macho o hembra?</string>
+    <string name="macho">Macho</string>
+    <string name="hembra">Hembra</string>
+    <string name="boton_siguiente">Siguiente</string>
+    <string name="pequeño">Pequeño</string>
+
+    <string name="menu">Menu</string>
+    <string name="cuentas">Cuentas</string>
+    <string name="perrito">Perrito</string>
+    <string name="home_button">Casita</string>
+    <string name="texto_inicio">Conecta, cuida y encuentra: todo para tus mejores amigos de cuatro patas.</string>
+    <string name="bienvenido">¡Guau, bienvenido de nuevo!</string>
 </resources>

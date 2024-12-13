@@ -1,5 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="primary_color">#4CAF50</color>
+    <color name="secondary_color">#F44336</color>
+    <color name="background_color">#FAFAFA</color>
+    <color name="text_color">#212121</color>
+    <color name="hint_color">#9E9E9E</color>
+    <color name="olive_green">#606c38</color>
+    <color name="dark_green">#283618</color>
+    <color name="beige">#fefae0</color>
+    <color name="mustard">#dda15e</color>
+    <color name="brown">#bc6c25</color>
+    <color name="black">#000000</color>
+    <color name="dark_brown">#4B2A1D</color>
+    <color name="medium_brown">#9E5523</color>
+    <color name="reddish_brown">#A24628</color>
+    <color name="burnt_pink">#C96C5A</color>
+    <color name="dark_beige">#C2966A</color>
+    <color name="light_beige">#E2C7A8</color>
+    <color name="pale_greenish_gray">#E1DAC6</color>
+    <color name="greenish_white">#F4F3E7</color>
+    <color name="pale_orange">#F7A577</color>
+    <color name="pale_pink">#FBE1D5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="fondo">#edbea4</color>
+    <color name="letra">#bf592b</color>
 </resources>
