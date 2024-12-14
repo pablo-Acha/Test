@@ -41,6 +41,16 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <Button
+        android:id="@+id/botton_configuracion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="configuracion del perfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
         android:id="@+id/BotonRegistro1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
