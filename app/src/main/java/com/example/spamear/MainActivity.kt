@@ -48,5 +48,9 @@ class MainActivity : AppCompatActivity() {
             val intentScroll = Intent(this, Registro11::class.java)
             startActivity(intentScroll)
         }
+        binding.BotonRegistro2.setOnClickListener {
+            val intentScroll = Intent(this, Registro2::class.java)
+            startActivity(intentScroll)
+        }
     }
 }
