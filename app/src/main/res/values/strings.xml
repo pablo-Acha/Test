@@ -39,4 +39,6 @@
     <string name="R6editText2"> Ej: 3 años</string>
     <string name="tituloRegistro5"> ¿Dónde estás ubicado? </string>
 
+    <string name="elige">Elige qué quieres</string>
+    <string name="boton_casita">Casita</string>
 </resources>

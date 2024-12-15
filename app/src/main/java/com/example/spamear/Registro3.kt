@@ -25,10 +25,10 @@ class Registro3 : AppCompatActivity() {
             if (name.isEmpty() || age.isEmpty()) {
                 Toast.makeText(this, "Debes completar todos los campos", Toast.LENGTH_SHORT).show()
             }
-            //    else {
-//                val intent = Intent(this, RegisterActivity::class.java)
-//                startActivity(intent)
-//            }
+                else {
+                val intent = Intent(this, Registro4::class.java)
+                startActivity(intent)
+            }
         }
     }
 }

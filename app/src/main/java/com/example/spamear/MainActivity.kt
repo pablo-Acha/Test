@@ -44,5 +44,9 @@ class MainActivity : AppCompatActivity() {
             val intentScroll = Intent(this, ConfiguracionDePerfil::class.java)
             startActivity(intentScroll)
         }
+        binding.BotonRegistro11.setOnClickListener {
+            val intentScroll = Intent(this, Registro11::class.java)
+            startActivity(intentScroll)
+        }
     }
 }
