@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import com.example.spamear.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -18,7 +19,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        val view = binding.root
+        setContentView(view)
 
         binding.BotonRegistro3.setOnClickListener {
             val intentScroll = Intent(this, Registro3::class.java)
@@ -30,5 +32,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentScroll)
         }
 
+        binding.bottonRegistro5.setOnClickListener {
+            val intentScroll = Intent(this, Registro5::class.java)
+            startActivity(intentScroll)
+        }
+
+        binding.bottonRegistro6.setOnClickListener {
+            val intentScroll = Intent(this, Registro6::class.java)
+            startActivity(intentScroll)
+        }
+        binding.bottonConfiguracion.setOnClickListener {
+            val intentScroll = Intent(this, ConfiguracionDePerfil::class.java)
+            startActivity(intentScroll)
+        }
+        binding.BotonRegistro2.setOnClickListener {
+            val intentScroll = Intent(this, Registro2::class.java)
+            startActivity(intentScroll)
+        }
     }
 }
