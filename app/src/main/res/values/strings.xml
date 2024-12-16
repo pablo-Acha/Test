@@ -41,4 +41,7 @@
 
     <string name="elige">Elige qué quieres</string>
     <string name="boton_casita">Casita</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>
