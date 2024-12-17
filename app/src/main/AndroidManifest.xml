@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Spamear"
         tools:targetApi="31">
         <activity
+            android:name=".Registro8"
+            android:exported="false" />
+        <activity
             android:name=".Registro7"
             android:exported="false" />
         <activity
