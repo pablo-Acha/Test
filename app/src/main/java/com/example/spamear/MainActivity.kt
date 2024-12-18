@@ -60,5 +60,10 @@ class MainActivity : AppCompatActivity() {
             val intentScroll = Intent(this, Registro8::class.java)
             startActivity(intentScroll)
         }
+
+        binding.BotonAnuncio.setOnClickListener {
+            val intentScroll = Intent(this, PantallaAnuncios::class.java)
+            startActivity(intentScroll)
+        }
     }
 }
