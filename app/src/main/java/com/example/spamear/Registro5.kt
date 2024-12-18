@@ -8,8 +8,11 @@ import com.example.spamear.databinding.ActivityRegistro5Binding
 import com.example.spamear.dataclass.Zonas
 
 class Registro5 : AppCompatActivity() {
+
     private lateinit var binding: ActivityRegistro5Binding
+
     private val recylcerEjemploAdapter by lazy { RecyclerAdapter() }
+
     var listaDatos : MutableList<Zonas>  = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,6 +85,8 @@ class Registro5 : AppCompatActivity() {
             println("No hay zonas seleccionadas.")
         }
     }
+
+
 
 
 }

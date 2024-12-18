@@ -26,31 +26,33 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.EjemploViewHolder>(
             )
         )
     }
-
     override fun onBindViewHolder(holder: EjemploViewHolder, position: Int) {
         holder.binding(listaDatos[position])
     }
-
     override fun getItemCount(): Int = listaDatos.size
 
     inner class EjemploViewHolder(private val binding: ItemZonasBinding) :
         RecyclerView.ViewHolder(binding.root)  {
         fun binding(data: Zonas) {
-            binding.checkBox1.id = data.id
             binding.checkBox1.isChecked = data.checkeo
             binding.textViewZona.text = data.nombreZona
             binding.textViewZonas.text = data.zonas
+           // binding.checkBox1.setOnCheckedChangeListener(null)
             binding.checkBox1.setOnCheckedChangeListener { _, isChecked ->
-                // Actualiza el valor en la lista de datos
-                data.checkeo = isChecked
+                if (isChecked) {
+                    listaDatos.forEach { it.checkeo = false }
+                    data.checkeo = true
+                    for (i in 0..listaDatos.size-1){
+                        if(listaDatos[i]!=data){
+                            notifyItemChanged(i)
+                        }
+                    }
+                }
             }
         }
     }
-
     fun addDataToList(list: MutableList<Zonas>) {
         listaDatos.clear()
-
         listaDatos.addAll(list)
     }
-
 }
