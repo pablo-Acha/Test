@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo1"
     tools:context=".Registro2">
-
 
     <ImageView
         android:id="@+id/logoperro"
@@ -150,16 +149,42 @@
             </androidx.cardview.widget.CardView>
 
             <Button
-                android:id="@+id/BotonSiguiente"
+                android:id="@+id/BtnSiguiente"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#FF6B35"
-                android:text="Next"
+                android:text="Siguiente"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/CardviewContrasenia" />
+
+            <TextView
+                android:id="@+id/TxtNoCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aun no tienes \n cuenta? "
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toStartOf="@id/BtnSingUp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/BtnSiguiente" />
+
+            <Button
+                android:id="@+id/BtnSingUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#DCA15F"
+                android:text="Regístrate"
+                android:textColor="#542222"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/TxtNoCuenta"
+                app:layout_constraintTop_toTopOf="@id/TxtNoCuenta" />
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

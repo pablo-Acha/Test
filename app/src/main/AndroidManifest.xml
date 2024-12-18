@@ -29,9 +29,7 @@
         <activity
             android:name=".ConfiguracionDePerfil"
             android:exported="false" />
-        <activity
-            android:name=".ConfiguracionDePerfil"
-            android:exported="false" />
+
         <activity
             android:name=".Registro5"
             android:exported="false" />
@@ -44,12 +42,6 @@
         <activity
             android:name=".Registro3"
             android:exported="false" />
-        <activity
-            android:name=".Registro3"
-            android:exported="false" />
-        <activity
-            android:name=".registro1"
-            android:exported="true" />
         <activity
             android:name=".registro1"
             android:exported="true" />
