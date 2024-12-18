@@ -1,6 +1,8 @@
 package com.example.spamear
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.spamear.adapters.Recycler.RecyclerAdapter
@@ -21,6 +23,10 @@ class Registro5 : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         setUpRecyclerView()
+        val loginButton = binding.BtnSiguiente
+        loginButton.setOnClickListener {
+            validar()
+        }
 
     }
 
@@ -75,14 +81,16 @@ class Registro5 : AppCompatActivity() {
 
     }
 
+
+
+
+
     fun validar(){
         val seleccionados = listaDatos.filter { it.checkeo }
         if (seleccionados.isNotEmpty()) {
-            seleccionados.forEach {
-                println("Zona seleccionada: ${it.nombreZona}")
-            }
+            TODO()
         } else {
-            println("No hay zonas seleccionadas.")
+            TODO()
         }
     }
 
