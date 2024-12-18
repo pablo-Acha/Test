@@ -78,12 +78,7 @@ class Registro5 : AppCompatActivity() {
 
         }
 
-
     }
-
-
-
-
 
     fun validar(){
         val seleccionados = listaDatos.filter { it.checkeo }

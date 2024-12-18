@@ -36,7 +36,7 @@ class RecyclerAdapterAnuncios: RecyclerView.Adapter<RecyclerAdapterAnuncios.Ejem
             binding.tituloItemAnuncio.text = data.titulo
             binding.descripcionPerro.text = data.descripcion
             binding.nombrePerro.text = data.nombre
-            TODO("agregar imagen")
+
         }
     }
 

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.spamear.databinding.ItemZonasBinding
 import androidx.recyclerview.widget.RecyclerView
+import com.example.spamear.dataclass.PerfilAnuncio
 import com.example.spamear.dataclass.Zonas
 
 
