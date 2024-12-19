@@ -2,14 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navCuenta"
-        android:title="Mi cuenta" />
-
-    <item
-        android:id="@+id/nav_settings"
-        android:title="Settings" />
-
+        android:title="Mi cuenta"
+        android:icon="@drawable/cuenta_icon"
+        />
 
     <item
         android:id="@+id/nav_logout"
-        android:title="Logout" />
+        android:title="Cerrar sesion"
+        android:icon="@drawable/cerraresion_icon" />
 </menu>

@@ -65,5 +65,9 @@ class MainActivity : AppCompatActivity() {
             val intentScroll = Intent(this, PantallaAnuncios::class.java)
             startActivity(intentScroll)
         }
+        binding.botonPublicar.setOnClickListener {
+            val intentScroll = Intent(this, PublicarAdopcion::class.java)
+            startActivity(intentScroll)
+        }
     }
 }
