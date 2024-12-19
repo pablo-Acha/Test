@@ -7,9 +7,7 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import com.example.spamear.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.spamear.databinding.ActivityRegistro3Binding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -67,6 +65,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.botonPublicar.setOnClickListener {
             val intentScroll = Intent(this, PublicarAdopcion::class.java)
+            startActivity(intentScroll)
+        }
+        binding.parejas.setOnClickListener {
+            val intentScroll = Intent(this, Registro21::class.java)
             startActivity(intentScroll)
         }
     }

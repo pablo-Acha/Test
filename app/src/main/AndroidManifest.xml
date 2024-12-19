@@ -14,12 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Spamear"
         tools:targetApi="31">
-
-        <activity
-            android:name=".Registro10"
-            android:exported="false" />
         <activity
             android:name=".Registro21"
+            android:exported="false" />
+        <activity
+            android:name=".Registro10"
             android:exported="false" />
         <activity
             android:name=".PublicarAdopcion"
@@ -42,7 +41,6 @@
         <activity
             android:name=".ConfiguracionDePerfil"
             android:exported="false" />
-
         <activity
             android:name=".Registro5"
             android:exported="false" />

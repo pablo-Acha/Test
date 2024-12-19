@@ -1,20 +1,19 @@
-package com.example.registro
+package com.example.spamear
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.spamear.databinding.ActivityRegistro21Binding
-import com.example.spamear.adapters.Recycler.ParejaAdapter
-import com.example.spamear.dataclassPareja.Pareja
 import com.google.firebase.firestore.FirebaseFirestore
 
 class Registro21 : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegistro21Binding
-    private lateinit var adapter: ParejaAdapter
     private lateinit var firestore: FirebaseFirestore
-    private val parejaList = mutableListOf<Pareja>()
+    private lateinit var adapter: MascotaAdapter
+    private val mascotaList = mutableListOf<Mascota>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,13 +22,26 @@ class Registro21 : AppCompatActivity() {
 
         firestore = FirebaseFirestore.getInstance()
 
+        setupDropdown()
+
         setupRecyclerView()
 
         fetchPetsFromFirestore()
     }
 
+    private fun setupDropdown() {
+
+        val razas = listOf("Labrador", "Golden Retriever", "Beagle", "Bulldog")
+
+        val dropdownAdapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, razas)
+
+        binding.menuItemRaza.setAdapter(dropdownAdapter)
+    }
+
     private fun setupRecyclerView() {
-        adapter = ParejaAdapter()
+
+        adapter = MascotaAdapter(mascotaList)
+
         binding.parejas.layoutManager = LinearLayoutManager(this)
         binding.parejas.adapter = adapter
     }
@@ -38,15 +50,15 @@ class Registro21 : AppCompatActivity() {
         firestore.collectionGroup("pets")
             .get()
             .addOnSuccessListener { documents ->
-                parejaList.clear()
+                mascotaList.clear()
                 for (document in documents) {
-                    val pareja = document.toObject(Pareja::class.java)
-                    parejaList.add(pareja)
+                    val mascota = document.toObject(Mascota::class.java)
+                    mascotaList.add(mascota)
                 }
-                adapter.updateData(parejaList)
+                adapter.notifyDataSetChanged()
             }
             .addOnFailureListener { e ->
-                Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error al cargar datos: ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
 }

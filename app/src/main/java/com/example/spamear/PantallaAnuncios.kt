@@ -185,11 +185,9 @@ class PantallaAnuncios : AppCompatActivity() {
         val gson = Gson()
         val listaAnuncios = mutableListOf<PerfilAnuncio>()
 
-        // Recuperar la lista de claves
         val clavesJson = sharedPref.getString(CLAVES_KEY, "[]")
         val claves = gson.fromJson(clavesJson, ArrayList::class.java) as ArrayList<String>
 
-        // Recuperar cada objeto asociado a las claves
         for (clave in claves) {
             val perfilJson = sharedPref.getString(clave, null)
             if (perfilJson != null) {

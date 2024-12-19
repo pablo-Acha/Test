@@ -1,14 +1,14 @@
-package com.example.registro
+package com.example.spamear
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.spamear.databinding.PetItemBinding
-import com.example.spamear.Mascota
 
 class MascotaAdapter(private val mascotaList: List<Mascota>) :
     RecyclerView.Adapter<MascotaAdapter.ViewHolder>() {
 
+    // ViewHolder ahora utiliza el binding directamente
     class ViewHolder(private val binding: PetItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(mascota: Mascota) {
             binding.petName.text = "Nombre: ${mascota.nombre}"
@@ -25,7 +25,7 @@ class MascotaAdapter(private val mascotaList: List<Mascota>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val mascota = mascotaList[position]
-        holder.bind(mascota)
+        holder.bind(mascota) // Llama a la función bind para asignar los datos
     }
 
     override fun getItemCount(): Int = mascotaList.size
