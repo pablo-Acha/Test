@@ -49,6 +49,17 @@
     <string name="busqueda_edad">3-5 años</string>
     <string name="busqueda_zona">Zona Miraflores</string>
 
+
     <string name="filtrar">Filtra por lo que buscas \npara tu canino!</string>
+
+    <string name="email">Email</string>
+    <string name="contrasenia">Contraseña</string>
+    <string name="TituloLog">Bienvenido a \nPawPal</string>
+    <string name="IniSesion">Inicio Sesión</string>
+    <string name="Sig">Siguiente</string>
+    <string name="PregNoCuenta">Aun no tienes \n cuenta? </string>
+    <string name="Registrate">Regístrate</string>
+    <string name="ContraOculta">********</string>
+    <string name="EjCorreo">pepita4@gmail.com</string>
 
 </resources>
