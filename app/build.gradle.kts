@@ -41,28 +41,22 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
-    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
-    implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-auth")
-    implementation ("com.google.android.material:material:1.3.0-alpha03")
-    implementation("com.google.code.gson:gson:2.11.0")
-    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
-    implementation("com.google.firebase:firebase-firestore")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation("com.google.firebase:firebase-database-ktx:21.0.0") // Firebase Realtime Database
-    implementation(platform("com.google.firebase:firebase-bom:32.8.0")) // Firebase BOM
-    implementation("com.google.firebase:firebase-analytics-ktx") // Firebase Analytics
+    // Firebase BOM (una sola versión centralizada)
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-database-ktx")
-    implementation("com.google.android.gms:play-services-basement:18.2.0")
 
+    // Gson para JSON
+    implementation("com.google.code.gson:gson:2.11.0")
 }

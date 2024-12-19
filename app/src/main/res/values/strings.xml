@@ -36,7 +36,7 @@
     <string name="R6pregunta1"> ¿Cuál es su nombre?</string>
     <string name="R6pregunta2"> ¿Cuántos años tiene?</string>
     <string name="R6editText1"> Ej: Cachuchin</string>
-    <string name="R6editText2"> Ej: 3 años</string>
+    <string name="R6editText2"> Ej: 3 </string>
     <string name="tituloRegistro5"> ¿Dónde estás ubicado? </string>
 
     <string name="elige">Elige qué quieres</string>
@@ -44,4 +44,11 @@
 
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
+
+    <string name="busqueda_raza">Husky</string>
+    <string name="busqueda_edad">3-5 años</string>
+    <string name="busqueda_zona">Zona Miraflores</string>
+
+    <string name="filtrar">Filtra por lo que buscas \npara tu canino!</string>
+
 </resources>

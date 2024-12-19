@@ -6,163 +6,156 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".Registro3">
+    tools:context=".Registro10">
+
     <TextView
-        android:id="@+id/titulo_main"
+        android:id="@+id/TituloPrincipal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="148dp"
         android:gravity="center"
-        android:text="@string/main_title"
-        android:textColor="@color/reddish_brown"
-        android:textSize="42sp"
         android:textStyle="bold"
-        android:padding="15dp"
+        android:text="@string/genero"
+        android:textColor="#BF592B"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
+        android:layout_width="388dp"
+        android:layout_height="308dp"
+        android:layout_marginTop="100dp"
         android:background="#DCA15F"
-        android:layout_marginBottom="10dp"
         app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/TituloPrincipal">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/contenedor"
+            android:id="@+id/coso"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/fondo"
+            android:background="#DCA15F"
+            android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/titulo_main">
+            app:layout_constraintTop_toBottomOf="@+id/TituloPrincipal">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/carta_nombre"
+                android:id="@+id/CardviewOpcionMediano"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                app:cardBackgroundColor="@color/fondo"
+                android:layout_marginTop="15dp"
                 app:cardCornerRadius="30dp"
+                android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="138dp"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:id="@+id/nombre_main"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/nombre"
-                        android:textColor="@color/dark_brown"
-                        android:textSize="23dp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <EditText
-                        android:id="@+id/nombre_duenio"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@color/white"
-                        android:hint="@string/ejemplo_nombre"
-                        android:inputType="textPersonName"
-                        android:padding="12dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:textColor="@color/dark_brown"
-                        android:textColorHint="@color/medium_brown"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/nombre_main" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/carta_edad"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                app:cardBackgroundColor="@color/fondo"
-                app:cardCornerRadius="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/carta_nombre">
+                app:layout_constraintTop_toTopOf="@id/coso">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="20dp">
+                    android:padding="10dp">
 
-                    <TextView
-                        android:id="@+id/tv_age_label"
+                    <RadioButton
+                        android:id="@+id/radioMediano"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/edad"
-                        android:textColor="@color/dark_brown"
-                        android:textSize="23dp"
-                        android:textStyle="bold"
+                        android:buttonTint="#FF6B35"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <EditText
-                        android:id="@+id/edad_duenio"
+                    <TextView
+                        android:id="@+id/textoMediano"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@color/white"
-                        android:hint="@string/ejemplo_edad"
-                        android:inputType="number"
-                        android:padding="12dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:textColor="@color/dark_brown"
-                        android:textColorHint="@color/medium_brown"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/macho"
+                        android:textColor="#9E7F72"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_age_label" />
+                        app:layout_constraintStart_toEndOf="@id/radioMediano"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/btn_next"
+                android:id="@+id/CardviewOpcionGrande"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                app:cardCornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/CardviewOpcionMediano">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radioGrande"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/fondo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textoGrande"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/hembra"
+                        android:textColor="#9E7F72"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/radioGrande"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_register_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="16dp"
                 app:cardBackgroundColor="#bc6b24"
                 app:cardCornerRadius="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/carta_edad">
+                app:layout_constraintTop_toBottomOf="@id/CardviewOpcionGrande">
 
                 <Button
-                    android:id="@+id/boton_next_duenio"
+                    android:id="@+id/BotonSiguiente"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#bc6b24"
                     android:paddingVertical="10dp"
-                    android:layout_marginBottom="10dp"
                     android:text="@string/boton_siguiente"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/edad_duenio"/>
-
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

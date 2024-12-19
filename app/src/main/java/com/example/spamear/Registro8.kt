@@ -1,40 +1,47 @@
 package com.example.spamear
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.RadioButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.spamear.databinding.ActivityRegistro8Binding
 
 class Registro8 : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegistro8Binding
-    private var lastSelectedRadioButton: RadioButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityRegistro8Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Configura el comportamiento de los RadioButtons
-        setupRadioButtonBehavior()
-    }
+        val userID = intent.getStringExtra("userID")
+        val zona = intent.getStringExtra("zona")
+        val nombreMascota = intent.getStringExtra("nombre")
+        val edadMascota = intent.getStringExtra("edad")
+        val razaMascota = intent.getStringExtra("raza")
 
-    private fun setupRadioButtonBehavior() {
-        // Configurar los RadioButtons para que solo uno pueda seleccionarse a la vez
-        binding.radioPequenio.setOnClickListener { handleRadioButtonSelection(binding.radioPequenio) }
-        binding.radioMediano.setOnClickListener { handleRadioButtonSelection(binding.radioMediano) }
-        binding.radioGrande.setOnClickListener { handleRadioButtonSelection(binding.radioGrande) }
-    }
+        var tamanioMascota: String? = null
 
-    private fun handleRadioButtonSelection(currentRadioButton: RadioButton) {
-        // Deseleccionar el último RadioButton seleccionado
-        lastSelectedRadioButton?.isChecked = false
+        // Configurar radio buttons
+        binding.radioPequenio.setOnClickListener { tamanioMascota = "Pequeño" }
+        binding.radioMediano.setOnClickListener { tamanioMascota = "Mediano" }
+        binding.radioGrande.setOnClickListener { tamanioMascota = "Grande" }
 
-        // Seleccionar el actual RadioButton
-        currentRadioButton.isChecked = true
+        binding.BotonSiguiente.setOnClickListener {
+            if (tamanioMascota.isNullOrEmpty()) {
+                Toast.makeText(this, "Selecciona un tamaño", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
-        // Actualizar el último RadioButton seleccionado
-        lastSelectedRadioButton = currentRadioButton
+            val intent = Intent(this, Registro10::class.java)
+            intent.putExtra("userID", userID)
+            intent.putExtra("zona", zona)
+            intent.putExtra("nombre", nombreMascota)
+            intent.putExtra("edad", edadMascota)
+            intent.putExtra("raza", razaMascota)
+            intent.putExtra("tamaño", tamanioMascota)
+            startActivity(intent)
+        }
     }
 }

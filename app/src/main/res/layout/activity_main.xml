@@ -10,16 +10,15 @@
 
     <Button
         android:id="@+id/BotonRegistro3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="227dp"
+        android:layout_height="46dp"
         android:text="Boton_Registro_3"
-        android:textSize="30sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.137" />
 
     <Button
         android:id="@+id/botton_registro5"
@@ -38,8 +37,8 @@
         android:text="registro6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.585"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintVertical_bias="0.422"
+        tools:layout_editor_absoluteX="-16dp" />
 
     <Button
         android:id="@+id/botton_configuracion"
@@ -48,8 +47,8 @@
         android:text="configuracion del perfil"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.455"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.349"
+        tools:layout_editor_absoluteX="-16dp" />
 
     <Button
         android:id="@+id/BotonRegistro1"
@@ -59,10 +58,10 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/BotonRegistro3"
-        app:layout_constraintVertical_bias="0.205" />
+        app:layout_constraintVertical_bias="0.092" />
 
     <Button
         android:id="@+id/BotonRegistro11"
@@ -72,9 +71,10 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/BotonRegistro1"
-        app:layout_constraintVertical_bias="0.522" />
+        app:layout_constraintVertical_bias="0.231" />
 
     <Button
         android:id="@+id/BotonRegistro2"
@@ -112,5 +112,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BotonRegistro7" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

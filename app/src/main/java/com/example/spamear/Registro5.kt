@@ -78,18 +78,23 @@ class Registro5 : AppCompatActivity() {
 
         }
 
+
     }
 
     fun validar(){
         val seleccionados = listaDatos.filter { it.checkeo }
         if (seleccionados.isNotEmpty()) {
-            TODO()
+            val zonaSeleccionada = seleccionados.first()
+            println("Zona seleccionada: ${zonaSeleccionada.nombreZona}")
+
+            val userID = intent.getStringExtra("userID")
+
+            val intent = Intent(this, Registro6::class.java)
+            intent.putExtra("userID", userID)
+            intent.putExtra("zona", zonaSeleccionada.nombreZona)
+            startActivity(intent)
         } else {
-            TODO()
+            println("No hay zonas seleccionadas.")
         }
     }
-
-
-
-
 }

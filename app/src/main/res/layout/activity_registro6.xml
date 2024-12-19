@@ -1,15 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml: <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo1"
-    tools:context=".Registro6"
-    >
-
-
+    android:background="@drawable/fondo"
+    tools:context=".Registro6">
 
     <TextView
         android:id="@+id/TituloPrincipal"
@@ -32,8 +29,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5"/>
 
-
-
     <androidx.cardview.widget.CardView
         android:id="@+id/CardviewContenedor1"
         android:layout_width="match_parent"
@@ -41,8 +36,7 @@
         app:cardCornerRadius="30dp"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalGuidelineRegisro6"
-        >
+        app:layout_constraintTop_toBottomOf="@id/horizontalGuidelineRegisro6">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/CV1constraint1"
@@ -61,9 +55,7 @@
                 android:id="@+id/CV1Cn1constraint1"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                app:layout_constraintTop_toBottomOf="@id/CV1CN1guidelineHorizontal"
-
-                >
+                app:layout_constraintTop_toBottomOf="@id/CV1CN1guidelineHorizontal">
 
                 <TextView
                     android:id="@+id/CV1Cn1textView"
@@ -71,13 +63,12 @@
                     android:layout_height="wrap_content"
                     android:text="@string/R6pregunta1"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_marginStart="15dp"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
-                
+                    app:layout_constraintStart_toStartOf="parent" />
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -85,44 +76,37 @@
                     app:layout_constraintTop_toBottomOf="@id/CV1Cn1textView"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:cardCornerRadius="50dp"
-                    android:layout_margin="10dp"
+                    android:layout_margin="10dp">
 
-                    >
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#edbea4"
                         android:hint="@string/R6editText1"
                         android:inputType="text"
-                        android:textColorHint="#bf592b"
                         android:paddingStart="15dp"
-
-                        />
+                        android:textColorHint="#bf592b" />
 
                 </androidx.cardview.widget.CardView>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/CV1Cn1constraint2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                app:layout_constraintTop_toBottomOf="@id/CV1Cn1constraint1"
-
-                >
+                app:layout_constraintTop_toBottomOf="@id/CV1Cn1constraint1">
 
                 <TextView
                     android:id="@+id/CV1Cn2textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/R6pregunta1"
+                    android:text="@string/R6pregunta2"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_marginStart="15dp"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -131,18 +115,17 @@
                     app:layout_constraintTop_toBottomOf="@id/CV1Cn2textView"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:cardCornerRadius="50dp"
-                    android:layout_margin="10dp"
+                    android:layout_margin="10dp">
 
-                    >
                     <EditText
+                        android:id="@+id/ejemplo_nombre"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#edbea4"
-                        android:hint="@string/R6editText1"
-                        android:inputType="text"
+                        android:hint="@string/R6editText2"
+                        android:inputType="number"
                         android:textColorHint="#bf592b"
-                        android:paddingStart="15dp"
-                        />
+                        android:paddingStart="15dp" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -154,64 +137,21 @@
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent="0.8"/>
 
-
-
-
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="#AB1D1D"
+            <Button
+                android:id="@+id/BotonSiguiente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#bc6b24"
+                android:padding="16dp"
+                android:text="Siguiente"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:cardCornerRadius="50dp"
-                android:layout_marginBottom="6dp"
-                >
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#bc6b24"
-                    >
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:cardCornerRadius="20dp"
-                        >
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="#542222"
-                            android:text="siguiente"
-                            android:textSize="15sp"
-                            android:textColor="@color/white"
-                            android:padding="10dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-
-                            />
-
-
-                    </androidx.cardview.widget.CardView>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
     </androidx.cardview.widget.CardView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
