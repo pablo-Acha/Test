@@ -1,96 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="30dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:cardElevation="8dp">
-
+        android:padding="8dp"
+        app:cardCornerRadius="30dp"
+        >
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/reddish_brown"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:background="@android:color/black">
-
+            android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/tituloItemAnuncio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="22sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
-                android:text="Detalles del Perro"
-                android:textColor="@android:color/white"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textColor="@color/white"/>
 
-            <ImageView
-                android:id="@+id/imagenAnuncio"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/ic_launcher_foreground"
-                android:contentDescription="@string/imagen_descripcion"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/tituloItemAnuncio"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                android:padding="10dp">
 
-            <TextView
-                android:id="@+id/nombrePerro"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Nombre: Max"
-                android:textSize="16sp"
-                android:textColor="@android:color/white"
-                android:layout_marginBottom="4dp"
-                app:layout_constraintStart_toEndOf="@id/imagenAnuncio"
-                app:layout_constraintTop_toTopOf="@id/imagenAnuncio"
-                app:layout_constraintEnd_toEndOf="parent" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/lineaGuia3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.3"/>
+                <ImageView
+                    android:id="@+id/imagenAnuncio"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:layout_constraintEnd_toEndOf="@id/lineaGuia3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
-            <TextView
-                android:id="@+id/razaPerro"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Raza: Labrador"
-                android:textSize="14sp"
-                android:textColor="@android:color/white"
-                app:layout_constraintStart_toEndOf="@id/imagenAnuncio"
-                app:layout_constraintTop_toBottomOf="@id/nombrePerro"
-                app:layout_constraintEnd_toEndOf="parent" />
+                <TextView
+                    android:id="@+id/nombrePerro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/lineaGuia3"
 
-            <TextView
-                android:id="@+id/edadPerro"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Edad: 2 años"
-                android:textSize="14sp"
-                android:textColor="@android:color/white"
-                app:layout_constraintStart_toEndOf="@id/imagenAnuncio"
-                app:layout_constraintTop_toBottomOf="@id/razaPerro"
-                app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@id/imagenAnuncio"
+                    android:gravity="center"
+                    />
 
-            <TextView
-                android:id="@+id/zonaPerro"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Zona: Norte"
-                android:textSize="14sp"
-                android:textColor="@android:color/white"
-                app:layout_constraintStart_toEndOf="@id/imagenAnuncio"
-                app:layout_constraintTop_toBottomOf="@id/edadPerro"
-                app:layout_constraintEnd_toEndOf="parent" />
+                <TextView
+                    android:id="@+id/descripcionPerro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/lineaGuia3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
     </androidx.cardview.widget.CardView>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
