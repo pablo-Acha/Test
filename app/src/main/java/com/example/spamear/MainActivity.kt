@@ -1,5 +1,6 @@
 package com.example.spamear
 
+import com.example.spamear.Registro2
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button

@@ -77,7 +77,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:background="@null"
-                        android:hint="reallygreatsite.com"
+                        android:hint="pepita@gmail.com"
                         android:inputType="textEmailAddress"
                         android:padding="12dp"
                         android:textColor="#A0522D"
