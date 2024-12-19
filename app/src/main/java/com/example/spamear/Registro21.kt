@@ -1,7 +1,6 @@
 package com.example.spamear
 
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,26 +21,12 @@ class Registro21 : AppCompatActivity() {
 
         firestore = FirebaseFirestore.getInstance()
 
-        setupDropdown()
-
         setupRecyclerView()
-
         fetchPetsFromFirestore()
     }
 
-    private fun setupDropdown() {
-
-        val razas = listOf("Labrador", "Golden Retriever", "Beagle", "Bulldog")
-
-        val dropdownAdapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, razas)
-
-        binding.menuItemRaza.setAdapter(dropdownAdapter)
-    }
-
     private fun setupRecyclerView() {
-
         adapter = MascotaAdapter(mascotaList)
-
         binding.parejas.layoutManager = LinearLayoutManager(this)
         binding.parejas.adapter = adapter
     }

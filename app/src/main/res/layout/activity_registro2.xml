@@ -81,6 +81,7 @@
                         android:layout_height="wrap_content"
                         android:text="Email"
                         android:textColor="#DCA15F"
+                        android:textStyle="bold"
                         android:textSize="14sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -92,6 +93,7 @@
                         android:layout_marginTop="8dp"
                         android:background="@null"
                         android:hint="reallygreatsite.com"
+                        android:textColorHint="@color/black"
                         android:inputType="textEmailAddress"
                         android:padding="12dp"
                         android:textColor="#A0522D"
@@ -103,7 +105,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- CardView para Contraseña -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/CardviewContrasenia"
                 android:layout_width="0dp"
@@ -126,6 +127,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Contraseña"
+                        android:textStyle="bold"
                         android:textColor="#DCA15F"
                         android:textSize="14sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -140,6 +142,7 @@
                         android:inputType="textPassword"
                         android:padding="12dp"
                         android:textColor="#A0522D"
+                        android:textColorHint="@color/black"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

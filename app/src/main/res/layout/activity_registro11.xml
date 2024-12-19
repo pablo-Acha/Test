@@ -81,16 +81,15 @@
                 android:id="@+id/descripcion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:gravity="center"
+                android:padding="16dp"
                 android:text="@string/texto_inicio"
                 android:textColor="@color/medium_brown"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                android:padding="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/perrito_gif" />
+                app:layout_constraintTop_toBottomOf="@+id/perrito_gif" />
 
             <ImageButton
                 android:id="@+id/boton_casa"
@@ -107,10 +106,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-    <!-- Contenido principal -->
-
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationMenu"

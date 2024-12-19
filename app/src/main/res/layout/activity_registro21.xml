@@ -1,11 +1,10 @@
-<?xml version = "1.0" encoding = "utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/main"
     android:layout_height="match_parent"
+    android:id="@+id/main"
     android:background="@drawable/fondo"
     tools:context=".Registro21">
 
@@ -14,53 +13,61 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/filtrar"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/medium_brown"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/contenedor_drops_menus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_margin="16dp"
         app:layout_constraintTop_toBottomOf="@id/button_filtrar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Raza"
             android:contentDescription="Dropdown de raza"
-            app:layout_constraintTop_toTopOf="parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
             <AutoCompleteTextView
                 android:id="@+id/menu_item_raza"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:padding="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:hint="Raza"
+                android:padding="12dp"
+                android:background="@android:color/white"
                 android:inputType="none"
-                android:importantForAccessibility="yes"
-                tools:ignore="TouchTargetSize" />
+                android:importantForAccessibility="yes" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="edad">
+            android:hint="Edad"
+            android:contentDescription="Dropdown de edad">
 
             <AutoCompleteTextView
                 android:id="@+id/menu_item_edad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:padding="12dp"
                 android:hint="Edad"
-                android:padding="8dp"
+                android:background="@android:color/white"
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,15 +75,18 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="zona">
+            android:hint="Zona"
+            android:contentDescription="Dropdown de zona">
 
             <AutoCompleteTextView
                 android:id="@+id/menu_item_zona"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:padding="12dp"
                 android:hint="Zona"
-                android:padding="8dp"
+                android:background="@android:color/white"
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
@@ -85,9 +95,9 @@
         android:id="@+id/parejas"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/contenedor_drops_menus"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="8dp" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.spamear
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.RadioButton
@@ -61,10 +62,14 @@ class Registro10 : AppCompatActivity() {
                         Toast.makeText(this, "Mascota registrada con éxito", Toast.LENGTH_SHORT)
                             .show()
                         finish()
+                        val intentScroll = Intent(this, Registro11::class.java)
+                        startActivity(intentScroll)
+
                     }
                     .addOnFailureListener { e ->
                         Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
                     }
+
             }
         }
     }

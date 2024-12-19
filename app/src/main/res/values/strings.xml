@@ -50,5 +50,6 @@
     <string name="busqueda_zona">Zona Miraflores</string>
 
     <string name="filtrar">Filtra por lo que buscas \npara tu canino!</string>
+    <string name="imagen_descripcion">imagen_descripcion</string>
 
 </resources>

@@ -56,4 +56,6 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.EjemploViewHolder>(
         listaDatos.clear()
         listaDatos.addAll(list)
     }
+
+
 }

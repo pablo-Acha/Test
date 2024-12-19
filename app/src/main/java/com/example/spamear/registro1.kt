@@ -26,6 +26,10 @@ class registro1 : AppCompatActivity() {
                 registerUser(email, password)
             }
         }
+        binding.BotonSiguiente.setOnClickListener {
+            val intentScroll = Intent(this, Registro2::class.java)
+            startActivity(intentScroll)
+        }
     }
 
     private fun validateFields(email: String, password: String): Boolean {
