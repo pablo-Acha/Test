@@ -33,6 +33,19 @@ class Registro11 : AppCompatActivity() {
             this, drawerLayout, binding.toolbarMain, R.string.nav_open, R.string.nav_close
         )
 
+        binding.botonPublicar.setOnClickListener {
+            val intentScroll = Intent(this, PublicarAdopcion::class.java)
+            startActivity(intentScroll)
+        }
+
+        binding.botonBuscar.setOnClickListener {
+            val intentScroll = Intent(this, Registro21::class.java)
+            startActivity(intentScroll)
+        }
+        binding.botonVerPerrosAd.setOnClickListener {
+            val intentScroll = Intent(this, PantallaAnuncios::class.java)
+            startActivity(intentScroll)
+        }
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
 

@@ -63,7 +63,7 @@ class PublicarAdopcion : AppCompatActivity() {
         binding.botonPublicar.setOnClickListener {
             // Crear el objeto PerfilAnuncio con los valores del formulario
             val perfilAnuncio = PerfilAnuncio(
-                titulo = "Adopción",
+                titulo = binding.editTextAdopP.text.toString(),
                 nombre = binding.editTextNombre.text.toString(),
                 imagen = "", // Campo de imagen vacío
                 descripcion = "\uD83D\uDC3E Nombre: ${binding.editTextNombre.text}\n \uD83D\uDC3E Edad: ${binding.editTextEdad.text}\n,\uD83C\uDFF7\uFE0F Raza: ${binding.editTextRaza.text}\n, " +

@@ -104,6 +104,33 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/botonBuscar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="buscar pareja"
+                />
+
+            <Button
+                android:id="@+id/botonPublicar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="publicar auncio"
+                />
+
+            <Button
+                android:id="@+id/botonVerPerrosAd"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/botonPublicar"
+                android:text="ver en adopcion"
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
