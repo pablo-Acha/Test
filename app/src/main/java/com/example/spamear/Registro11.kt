@@ -3,6 +3,7 @@ package com.example.spamear
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.spamear.databinding.ActivityRegistro11Binding
+import com.google.firebase.auth.FirebaseAuth
 
 class Registro11 : AppCompatActivity() {
 
@@ -45,8 +47,17 @@ class Registro11 : AppCompatActivity() {
                     val intent = Intent(this, ConfiguracionDePerfil::class.java)
                     startActivity(intent)
                     true
-                }else -> false
+                }
+                R.id.nav_logout -> {
+                    FirebaseAuth.getInstance().signOut()
+                    Toast.makeText(this, "Sesión cerrada.", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
             }
+            true
         }
 
 
