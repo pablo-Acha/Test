@@ -1,5 +1,6 @@
 package com.example.spamear
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +16,9 @@ import com.example.spamear.databinding.ActivityPantallaAnunciosBinding
 import com.example.spamear.databinding.ActivityRegistro8Binding
 import com.example.spamear.dataclass.PerfilAnuncio
 import com.example.spamear.dataclass.Zonas
+import com.example.spamear.PublicarAdopcion.Companion.CLAVES_KEY
+import com.example.spamear.PublicarAdopcion.Companion.SHARED_PREFS_NAME
+import com.google.gson.Gson
 
 class PantallaAnuncios : AppCompatActivity() {
 
@@ -35,6 +39,11 @@ class PantallaAnuncios : AppCompatActivity() {
             this, drawerLayout, binding.toolbarMain, R.string.nav_open, R.string.nav_close
         )
 
+        binding.botonBorrar.setOnClickListener {
+            val sharedPref = getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE)
+            sharedPref.edit().clear().apply()
+
+        }
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
@@ -151,7 +160,12 @@ class PantallaAnuncios : AppCompatActivity() {
                         "✂\uFE0F Esterilizado: No"
             )
         )
-
+        val listaShared  = encontrarAnuncios()
+        if(listaShared.size != 0){
+            for (i in listaShared.size-1 downTo 0) {
+                listaDatos.add(listaShared[i])
+            }
+        }
         for (perfilAnuncio in l) {
             listaDatos.add(perfilAnuncio)
         }
@@ -165,4 +179,26 @@ class PantallaAnuncios : AppCompatActivity() {
         }
 
     }
+
+    fun encontrarAnuncios(): MutableList<PerfilAnuncio> {
+        val sharedPref = getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE)
+        val gson = Gson()
+        val listaAnuncios = mutableListOf<PerfilAnuncio>()
+
+        // Recuperar la lista de claves
+        val clavesJson = sharedPref.getString(CLAVES_KEY, "[]")
+        val claves = gson.fromJson(clavesJson, ArrayList::class.java) as ArrayList<String>
+
+        // Recuperar cada objeto asociado a las claves
+        for (clave in claves) {
+            val perfilJson = sharedPref.getString(clave, null)
+            if (perfilJson != null) {
+                val perfilAnuncio = gson.fromJson(perfilJson, PerfilAnuncio::class.java)
+                listaAnuncios.add(perfilAnuncio)
+            }
+        }
+
+        return listaAnuncios
+    }
+
 }
